@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>한식 주문하기</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        background-color: #bfdbdd;
+        
+      }
+      .컨테이너 {
+        width: 70%;
+        background-color: white;
+        padding: 20px;
+        margin: 20px auto; /*auto 경우 가운데 정렬과 같은 나열을 사용할 때 쓰임*/
+        border-radius: 10px;
+        box-shadow: 0 0 10px #d7d7d7;
+        display: block;
+      }
+      h1,
+      button {
+        text-align: center;
+      }
+      button {
+        width: 100px;
+        background-color: #555;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 8px 10px;
+      }
+      .food {
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+        border: 3px solid black;
+        border-radius: 10px;
+      }
+      .side {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+      .메뉴꾸미기,
+      .사이드꾸미기 {
+        display: inline-flex;
+      }
+      ul {
+        list-style-type: none;
+      }
+      li {
+        display: inline;
+        font-size: large;
+      }
+
+      .헤더,
+      .푸터 {
+        background-color: rgb(80, 78, 78);
+        color: white;
+        padding: 8px;
+        text-align: center;
+      }
+      .네비게이션 {
+        background-color: rgb(119, 125, 129);
+        padding: 10px;
+        text-align: center;
+      }
+      a {
+        font-weight: 900;
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="헤더">
+      <h1>KH 배달 서비스 - 한식 주문하기</h1>
+    </div>
+    <div class="네비게이션">
+      <ul>
+         <li><a href="홈페이지.html">홈</a></li>&nbsp;&nbsp;
+        <li><a href="#">주문하기</a></li>
+      </ul>
+    </div>
+    <div class="컨테이너">
+      <h1>🍴한식 주문하기🍴</h1>
+      <form>
+        <div class="메뉴꾸미기">
+          <div>
+            <img class="food" src="음식이미지/된장찌개.PNG" alt="" />
+            <br />
+            <input type="radio" />된장찌개
+          </div>
+          <div>
+            <img class="food" src="음식이미지/비빔밥.PNG" alt="" />
+            <br />
+            <input type="radio" />비빔밥
+          </div>
+          <div>
+            <img class="food" src="음식이미지/불고기.PNG" alt="" />
+            <br />
+            <input type="radio" />불고기
+          </div>
+        </div>
+        <div class="사이드꾸미기">
+          <div>
+            <img class="side" src="음식이미지/계란.png" alt="" />
+            <br />
+            <input type="checkbox" />계란
+          </div>
+          <div>
+            <img class="side" src="음식이미지/두부.png" alt="" />
+            <br />
+            <input type="checkbox" />두부
+          </div>
+          <div>
+            <img class="side" src="음식이미지/김치.png" alt="" />
+            <br />
+            <input type="checkbox" />김치
+          </div>
+        </div>
+        <div>
+          <label>맛 선택 : </label>
+          <select>
+            <option>매운맛</option>
+            <option>보통맛</option>
+            <option>안매운맛</option>
+          </select>
+        </div>
+        <div>
+          <label>배달주소 : </label>
+          <textarea rows="3" required></textarea><br />
+          <small>도서/산간 지역은 배달비 3000원 부과됩니다.</small>
+        </div>
+        <button>주문하기</button>
+      </form>
+    </div>
+    <div class="푸터">&copy; 2024 배달 서비스. All rights reserved.</div>
+  </body>
+</html>
