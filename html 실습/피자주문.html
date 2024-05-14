@@ -1,94 +1,130 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <style>
-            img{
-                width: 20%;
-            }
-            body{
-                background-color: #f9f9f9;
-            }
-            .컨테이너{
-                width: 70%;
-                background-color: white;
-                margin: 0 auto;
-                padding: 20px;
-            }
-            h1{
-                text-align: center;
-            }
-            button{
-                background-color: yellowgreen;
-                border: none;
-                margin: 0 auto;
-                display: block;
-                border-radius: 7px;
-                padding: 8px;
-                color: white;
-                font-weight: 700;
-            }
-            .음료꾸미기{
-                width: 50px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="컨테이너">
-        <h1>🍕피자 주문하기🍕</h1>
-        
-        <form>
-            <div class="피자종류">
-            <label for="고르곤졸라">피자 선택 : 
-                <input id="고르곤졸라" type="checkbox">
-                <img src="../음식사진/고르곤졸라.png">
-            </label>
-            <label for="페퍼로니">피자 선택 :
-                <input id="페퍼로니" type="checkbox">
-                <img src="../음식사진/페퍼로니.png">
-            </label>
-            </div>
-            <div class="토핑">
-                <label>토핑 선택 : 
-                    <select name="토핑">
-                        <option>기본</option>
-                        <option>페퍼로니</option>
-                        <option>야채</option>
-                        <option>치즈</option>
-                        <option>햄</option>
-                    </select>
-                </label>
-            </div>
-            <br>
-            <div class="크기">
-                <label>크기선택 :
-                    <input type="radio"> Small
-                    <input type="radio"> Medium
-                    <input type="radio"> Large
-                </label>
-            </div>
-            <div class="음료">
-                <label>음료수 선택 : 
-                    <input type="checkbox"> 콜라 <img class="음료꾸미기" src="../음식사진/콜라.png" alt="">
-                    <input type="checkbox"> 사이다
-                    <input type="checkbox"> 맥주 <img class="음료꾸미기" src="../음식사진/맥주.png" alt="">
-                </label>
-            </div>
-            <div class="주소">
-                <label>
-                    배달주소 : 
-                    <textarea rows="3" cols="40" required></textarea>
-                    <small>도서/산간 지역은 배달비 3000 부과됩니다.</small>
-                </label>
-            </div>
-            <br><br>
-            <button>주문하기</button>
-        </form>
-        <a href="홈페이지메인.html">메인으로 돌아가기</a>
-        <footer>
-            &copy;Copyright BY PIZZA HUT KOREA LTD. ALL RIGHT RESERVED
-        </footer>
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <style>
+      img {
+        width: 20%;
+      }
+      body {
+        background-color: #f9f9f9;
+      }
+      .컨테이너 {
+        width: 70%;
+        background-color: white;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      button {
+        background-color: yellowgreen;
+        border: none;
+        margin: 0 auto;
+        display: block;
+        border-radius: 7px;
+        padding: 8px;
+        color: white;
+        font-weight: 700;
+      }
+      .음료꾸미기 {
+        width: 50px;
+      }
+      .헤더,
+      .푸터 {
+        background-color: rgb(80, 78, 78);
+        color: white;
+        padding: 8px;
+        text-align: center;
+      }
+      ul {
+        list-style-type: none;
+      }
+      li {
+        display: inline;
+        font-size: large;
+      }
+      .네비게이션 {
+        background-color: rgb(119, 125, 129);
+        padding: 10px;
+        text-align: center;
+      }
+      a {
+        font-weight: 900;
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="헤더">
+      <h1>KH 배달 서비스 - 피자 주문하기</h1>
     </div>
-    </body>
+    <div class="네비게이션">
+      <ul>
+        <li><a href="../html 한식주문/홈페이지.html">홈</a></li>
+        &nbsp;&nbsp; &nbsp;&nbsp;
+        <li><a href="#">주문하기</a></li>
+        &nbsp;&nbsp; &nbsp;&nbsp;
+        
+      </ul>
+    </div>
+    <div class="컨테이너">
+      <h1>🍕피자 주문하기🍕</h1>
+
+      <form>
+        <div class="피자종류">
+          <label for="고르곤졸라"
+            >피자 선택 :
+            <input id="고르곤졸라" type="checkbox" />
+            <img src="../음식사진/고르곤졸라.png" />
+          </label>
+          <label for="페퍼로니"
+            >피자 선택 :
+            <input id="페퍼로니" type="checkbox" />
+            <img src="../음식사진/페퍼로니.png" />
+          </label>
+        </div>
+        <div class="토핑">
+          <label
+            >토핑 선택 :
+            <select name="토핑">
+              <option>기본</option>
+              <option>페퍼로니</option>
+              <option>야채</option>
+              <option>치즈</option>
+              <option>햄</option>
+            </select>
+          </label>
+        </div>
+        <br />
+        <div class="크기">
+          <label
+            >크기선택 : <input type="radio" /> Small
+            <input type="radio" /> Medium <input type="radio" /> Large
+          </label>
+        </div>
+        <div class="음료">
+          <label
+            >음료수 선택 : <input type="checkbox" /> 콜라
+            <img class="음료꾸미기" src="../음식사진/콜라.png" alt="" />
+            <input type="checkbox" /> 사이다 <input type="checkbox" /> 맥주
+            <img class="음료꾸미기" src="../음식사진/맥주.png" alt="" />
+          </label>
+        </div>
+        <div class="주소">
+          <label>
+            배달주소 :
+            <textarea rows="3" cols="40" required></textarea>
+            <small>도서/산간 지역은 배달비 3000 부과됩니다.</small>
+          </label>
+        </div>
+        <br /><br />
+        <button>주문하기</button>
+      </form>
+      
+    </div>
+    <div class="푸터">&copy; 2024 배달 서비스. All rights reserved.</div>
+  </body>
 </html>
