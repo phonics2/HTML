@@ -1,0 +1,66 @@
+<!DOCTYPE html><!-- html 5 버전 사용-->
+<html lang="ko"><!-- html 코딩 시작    검색엔진 언어 설정 lang="ko"-->
+    <head><!-- 사이트에서 안보임x  meta title style script link-->
+        <title>블로그 설문조사</title>
+        <meta charset="UTF-8"><!-- 한글 깨짐 방지-->
+        <style>
+        body{
+            margin: 0 auto;
+            text-align: center;
+            background-color: #ccc;
+
+        }
+        .컨테이너{
+            border-radius: 10px;
+            margin: 0 auto; 
+            width: 60%;
+            background-color: white;
+            box-shadow: 0 0 10px #ff6767;
+            padding: 20px;
+            text-align: center;
+        }
+        input{
+            width: 90%;
+            padding: 5px;
+            
+        }
+        button{
+            background-color: #4CAF50;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            
+        }
+        
+        
+        </style>
+    </head>
+    <body>
+        <div class="컨테이너">
+            <h1>★블로그 설문조사★</h1>
+            <form>
+                <label for="이름">
+                    <p>이름</p>
+                    <input type="text" name="이름" placeholder="이름을 입력하세요." required>
+                </label>
+                <label for="이메일">
+                    <p>이메일</p>
+                    <input type="email" name="이메일" placeholder="이메일을 입력하세요." required>
+                </label>
+                <label for="age">
+                    <p>나이</p>
+                    <input type="number" name="나이" placeholder="나이를 작성하세요.">
+                </label>
+                <label for="의견">
+                    <p>의견</p>
+                    <input type="text" name="의견작성" placeholder="추가의견 작성하세요.">
+                </label>
+                <br> <br>
+                <button type="submit">제출</button>
+                <br><br>
+            </form>
+        </div>
+    </body>
+
+</html><!-- html 코딩 종료-->

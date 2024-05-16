@@ -1,0 +1,67 @@
+<!DOCTYPE html><!-- html 5 버전 사용-->
+<html><!-- html 코딩시작-->
+    <head><!-- title style linl script meta-->
+        <title>두 번째 블로그</title>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                margin: 0 auto;
+                text-align: center;
+                background-color: aqua;
+            }
+            .컨테이너{
+                width: 70%;
+                margin: 0 auto;
+                padding: 20px;
+                text-align: center;
+                background-color: white;
+                box-shadow: 0 0 10px tomato;
+            }
+            .비디오꾸미기{
+                width: 50%;
+                border-radius: 20px;
+                margin: 0 auto; /*상하 0 좌우 여백을 자동으로 설정*/
+                text-align: center;/*속성 내부에서 글자를 가운데 정렬(center)*/
+                display: block;/* 가운데 전체 차지를 함으로써 정렬*/
+            }
+            .이미지꾸미기{
+                width: 70%;
+                text-align: center;
+                margin: 0 auto;
+                display: block;
+                border-radius: 30px; /*30% 사각형 각 100%기준으로 30%만 각을 부드럽게 만든다는 의미 30px = 30%비슷함*/
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="컨테이너">
+            <h1>두 번째 블로그</h1>
+            <h2> 첫 번째 포스트 : 비디오 추가하기</h2>
+            <p>면 한사발 드시죠!!!! 여름에는 저희 블로그와 함께해요.&#128513</p>
+            <video class="비디오꾸미기" autoplay loop muted>
+                <source src="../비디오들/210925_tiny.mp4" type="video/mp4">
+            </video>
+            <br>
+            <h2>두 번째 포스트 : 이미지 추가하기</h2>
+            <p>이 포스트에는 이미지가 포함되어 있습니다.&#128586;</p>
+            <img class="이미지꾸미기" src="../이미지들/swimmingPartyMarley.jpg" alt="수영장말리">
+            <br>
+            <div class="댓글들">
+                <h2>모든 댓글</h2>
+                <div class="댓글">
+                    <p>사용자1 : </p>
+                    <p>이 블로그 정말 멋져요~!</p>
+                </div>
+                <div class="댓글">
+                    <p>사용자2 : </p>
+                    <p>이미지가 너무 귀엽네요.</p>
+                </div>
+                <div class="댓글">
+                    <input type="text" placeholder="이름을 입력하세요.">
+                    <input type="text" placeholder="내용을 입력하세요.">
+                </div>
+            </div>
+        </div>
+    </body>
+</html><!-- html 코딩 종료-->

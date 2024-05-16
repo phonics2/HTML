@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <style>
+        .정보 {
+            margin: 20px;
+        }
+        body {
+            display: inline-flex;
+        }
+        .메인 {
+            border-left: 2px solid gray;
+            width: 100%;
+            
+            
+        }
+        .b {
+            margin: 6px;
+            font-weight: 750;
+            width: 65%;
+        }
+        .a{
+            margin-left: 90px;
+        }
+        textarea{
+            margin-left: 6px;
+        }
+        .pw{
+            width: 220px;
+        }
+        
+    </style>
+    
+</head>
+
+<body>
+
+    <div class="컨테이너">
+        <h1>회원 가입</h1>
+        <br>
+        <form>
+            <div class="메인">
+                <table>
+                    <div>
+                    <tr>
+                        <th>ID</th>
+                        <td><input type="text" placeholder="아이디 10글자 이내" name="userID" required> <button>중복확인</button></td>
+                    </tr>
+                    </div>
+                    <div>
+                    <tr>
+                        <th>비밀번호</th>
+                        <td><input class="pw" type="text" placeholder="영문,숫자,특수문자 포함 8자 이상" name="pw1"></td>
+                    </tr>
+                    </div>
+                    <div>
+                    <tr>
+                        <th>비밀번호 확인</th>
+                        <td><input class="pw" type="text" name="pw2"></td>
+                    </tr>
+                    </div>
+                    <div>
+                    <tr>
+                        <th>Email</th>
+                        <td><input type="email" name="email1"> <select name="email2">
+                            <option>직접입력</option>
+                        </select></td>
+                        
+                    </tr>
+                </div>
+                </table>
+            </div>
+            <br><br>
+            <div class="성별">
+                성별 :
+                <input type="radio" name="gender" value="남성"> 남성
+                <input type="radio" name="gender" value="여성"> 여성
+            </div>
+            <br>
+            <div class="생일">
+                생년월일 :
+                <input type="date" name="birthday">
+            </div>
+            <br>
+            <div class="취미">
+                취미<br>
+                <input type="checkbox" name="hobby" value="야구"> 야구
+                <input type="checkbox" name="hobby" value="농구"> 농구
+                <input type="checkbox" name="hobby" value="축구"> 축구 <br>
+                <input type="checkbox" name="hobby" value="공부"> 공부
+                <input type="checkbox" name="hobby" value="음악감상"> 음악감상
+            </div>
+            <br><br>
+            <div class="intro">
+                자기소개
+                <textarea name="intro" rows="10" cols="80" ></textarea>
+            </div>
+            <br><br>
+            <button>회원가입</button> <button type="reset">다시입력</button>
+        </form>
+    </div>
+</body>
+
+</html>

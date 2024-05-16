@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>피자 주문 결과</title>
+        <meta charset="UTF-8">
+        <style>
+             li{
+                display: inline;
+                font-weight: 900;
+            }
+            h1{
+                text-align: center;
+            }
+            body{
+                margin: 0 auto;
+                background-color: rgb(255, 255, 255);
+            }
+            input{
+                padding: 4px;
+            }
+            label{
+                font-weight: 500;
+            }
+            button{
+                padding: 10px 15px;
+                border: none;
+                background-color: rgb(79, 233, 79);
+                border-radius: 10px;
+            }
+            .컨테이너{
+                background-color: rgb(252, 148, 130);
+                width: 80%;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="컨테이너">
+            <h1>🍕피자주문🍕</h1>
+            <form>
+                <label>
+                    고객명 : 
+                    <input type="text" name="clientName" required>
+                </label>
+                <br><br>
+                <label>
+                    전화번호 : 
+                    <input type="text" name="clientPhone">
+                </label>
+                <br><br>
+                <label>
+                    Email : 
+                    <input type="email" name="clientEmail">
+                </label>
+                <br><br>
+                <label>
+                    <input type="radio" name="size" value="Small">
+                    Small
+                </label>
+                <br> <br>
+                <label>
+                    <input type="radio" name="size" value="Medium">
+                    Medium
+                </label>
+                <br> <br>
+                <label>
+                    <input type="radio" name="size" value="Large">
+                    Large
+                </label>
+                <br><br>
+                 <ul>
+                    
+                    <li><input type="checkbox" name="topping" value="베이컨">베이컨</li>
+                    <br><br>
+                    <li><input type="checkbox" name="topping" value="치즈"> 치즈</li>
+                    <br><br>
+                    <li><input type="checkbox" name="topping" value="양파"> 양파</li>
+                    <br><br>
+                    <li><input type="checkbox" name="topping" value="버섯"> 버섯</li>
+                 </ul>
+                 </label>
+                 <br><br>
+                 <label>
+                    희망배송시간 : 
+                    <input type="time" name="wishTime">
+                    
+                 </label>
+                 <br><br><br><br>
+                 <label>
+                    배송시 요청사항 : <input type="text" placeholder="요청사항 입력하세요.">
+                    <br> <br>
+                    <button>주문하기</button>
+                 </label>
+                 
+            </form>
+        </div>
+    </body>
+</html>
