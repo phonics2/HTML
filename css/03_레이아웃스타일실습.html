@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        
+    </head>
+    <body>
+        <h1>레이아웃 실습 예제</h1>
+        <h3>block 형식 요소를 inline 형식으로 변경</h3>
+        <style>
+            
+            .블록{
+                border: 3px dotted blue;
+                display: block;
+                width: 120px;
+                height: 120px;
+                color: black;
+            }
+            .영역1{
+                background-color: lightcoral;
+            }
+            .영역2{
+                background-color: lightseagreen;
+                color: white;
+            }
+            .영역3{
+                background-color: lightgoldenrodyellow;
+            }
+            .영역4{
+                background-color: lightsteelblue;
+            }
+            .영역5{
+                background-color: lightgrey;
+            }
+            
+            .영역6{
+                background-color: lightpink;
+            }
+            .인라인{
+                display: inline;
+            }
+            .히든{
+                visibility: hidden;
+            }
+            
+            .인라인블록{
+                display: inline-block;
+            }
+            .논{
+                display: none;
+            }
+            
+            
+        </style>
+            <div class="블록 영역1 인라인">1번 영역</div>
+            <div class="블록 영역2 인라인">2번 영역</div>
+        
+            <h3>inline-block, none 확인하기</h3>
+            <div class="블록 영역1 인라인블록">1번 영역</div>
+            <div class="블록 영역2 인라인블록">2번 영역</div>
+            <div class="블록 영역3 인라인블록 히든 ">3번 영역</div>
+            <div class="블록 영역4 인라인블록">4번 영역</div>
+            <div class="블록 영역5 인라인블록 논">5번 영역</div>
+            <div class="블록 영역6 인라인블록">6번 영역</div>
+            <hr>
+            <h2>화면 영역 분할</h2>
+            <h3>상하로 2분할 하기</h3>
+            <style>
+                .컨테이너{
+                    border: 3px solid rgb(255, 0, 0);
+                    width: 470px;
+                    height: 470px;
+                }
+                /* 컨테이너 밑에 div가 존재한다는 표시 
+                   컨테이너에서 설정한 470 크기 안에서
+                   100% 하거나 50%를 유지하라는 의미
+                   자식 css
+                */
+                .컨테이너 > div{
+                    width: 100%;
+                    height: 50%;
+                }
+                .컨테이너 > div:first-child{
+                    background-color: lightyellow;
+                }
+                .컨테이너 > div:last-child{
+                    background-color: lightpink;
+                }
+
+                #태그 > div:first-child{
+                    background-color: lightblue;
+                }
+
+                #태그 > div:last-child{
+                    background-color: lightgreen;
+                }
+            </style>
+            <div class="컨테이너">
+                <div></div>
+                <div></div>
+            </div>
+            <h3>↓ id사용 ↓</h3>
+            <div class="컨테이너" id="태그">
+                <div></div>
+                <div></div>
+            </div>
+
+            <style>
+                .컨테이너2{
+                    border: 3px solid red;
+                    width: 400px;
+                    height: 400px;
+                }
+                .컨테이너2 > div{
+                    width: 100%;
+                    height: 50%;
+                }
+                #태그2 > div:nth-child(1){
+                    height: 25%;
+                    background-color: tomato;
+                }
+                #태그2 > div:nth-child(2){
+                    height: 25%;
+                    background-color: khaki;
+                }
+                /*
+                nth:child 특정한 순서에 있는 태그를 선택할 때 사용
+                n 숫자번째
+                th 번째
+                child 자식
+                
+                */
+                #태그2 > div:nth-child(3){
+                    height: 50%;
+                    background-color: aquamarine;
+                }
+                
+            </style>
+            
+            <h2>상하 3분할</h2>
+            <pre>
+                조건 : 25 : 25 : 50 비율
+            </pre>
+            <div class="컨테이너2" id="태그2">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            
+    </body>
+</html>
