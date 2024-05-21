@@ -1,0 +1,93 @@
+body{
+    background-color: #f6f6f6;
+    margin: 0 auto;
+    
+}
+header{
+    background-color: rgb(223, 235, 242);
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+nav{
+    background-color: rgb(223, 235, 242);
+    padding: 5px;
+    padding-bottom: 12px;
+    text-align: center;
+    width: 100%;
+    
+}
+nav a{
+    
+    text-decoration: none;
+    color: black;
+    margin-right: 12px;
+}
+main{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(157, 155, 155);
+    padding-bottom: 10px;
+    width: 90%;
+    margin: 0 auto;
+    
+    
+}
+.블록 input,select,option{
+    border-radius: 3px;
+    width: 97%;
+    height: 28px;
+    margin: 0 auto;
+    display: block;
+    border: 2px solid rgb(221, 219, 219);
+    margin: 10px;
+}
+textarea{
+    width: 98%;
+    height: 100px;
+    border-radius: 3px;
+    margin: 0 auto;
+    display: block;
+    border: 2px solid rgb(221, 219, 219);
+    margin: 10px;
+}
+button{
+    width: 97%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 9px;
+    cursor: pointer;
+    
+}
+.푸터{
+    background-color: rgb(223, 235, 242);
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+    
+}
+main h2{
+    text-align: center;
+    padding: 25px;
+}
+main h3{
+    margin-left: 10px;
+}
+.전화{
+    text-align: right;
+    margin: 20px;
+}
+.전화 a{
+    color: white;
+    background-color: black;
+    padding: 14px;
+    border-radius: 100%;
+    font-size: large;
+    text-decoration: none;
+}
