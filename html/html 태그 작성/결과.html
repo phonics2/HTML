@@ -13,7 +13,7 @@
             $(document).ready(function(){
                 //URL 파라미터에서 이름 값을 가져와서 표시
                 const url이름값가져오기 = new URLSearchParams(window.location.search);
-                const 이름값 = url이름값가져오기.get("user-name");
+                const 이름값 = url이름값가져오기.get("");
                 $("#이름결과").text(이름값);
 
             })

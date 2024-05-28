@@ -30,7 +30,11 @@
                 target  : 폼 데이터가 제출될 때의 응답을 표시할 창이나 프레임을 지정
                           target="_self" (현재창에서 이동하기)
                           target="_blank" (새창에서 이동하기)
-                            
+                
+                accept-charset : UTF-8 url 주소값 한글 깨짐 방지를 위해 문자
+
+                autocomplete : 자동완성기능 설정   
+                                기본값 on 사용중지 off
                             
         </pre>
 
@@ -39,6 +43,24 @@
             form 안에 작성된 input 과 textarea 는
             작성된 내용이 어느 부분에 해당하는지 식별할 때
             name 속성을 사용해서 전달
+        </pre>
+
+        <h3>값을 개발자나 회사에서 원하는 값으로 입력하지 않았을 때 실행 방지</h3>
+        <pre>
+            prevenDefault : 이벤트 기본 동작을 방지하기 위해 사용
+            html 태그의 기본 동작을 중지시켜 개발자가 원하는 동작을 구현할 수 있도록 유도
+
+            form에서는 submit 이벤트가 발생하면 폼 데이터를 서버로 전송하고 페이지를 새로고침
+            이 기능을 막아버림
+
+            사용방법
+            
+            <button type="submit" onclick="제출하기버튼(event)">제출</button>
+            <script>
+                function 제출하기버튼(event){
+                    event.preventDefault();
+                }
+            </script>
         </pre>
         <h3>URL Search Params</h3>
         <pre>
