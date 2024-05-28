@@ -5,13 +5,37 @@
         <meta charset="utf-8">
         <!-- 제이쿼리 주소 가져오기 or 파일-->
         <script src="../../../javascript/jQuery/jquery-3.7.1.js"></script>
+        <link rel="stylesheet" href="30_회원가입.css">
+        <style>
+            .container{
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 5px white;
+                text-align: center;
+            }
+            h1{
+                color: yellowgreen;
+                
+            }
+            p{
+                font-size: 18px;
+                color: #333;
+            }
+            span{
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
+        <div class="container">
         <h1>회원가입 완료되신것을 환영합니다.</h1>
         <p>이름 : <span id="resultName"></span></p>
         <p>나이 : <span id="resultAge"></span></p>
+        <p>성별 : <span id="resultGender"></span></p>
         <p>아이디 : <span id="resultId"></span></p>
-        
+        <p>취미 : <span id="resultHobby"></span></p>
+        </div>
     </body>
     <script>
         $(document).ready(function(){
@@ -19,15 +43,23 @@
             file:///C:/Users/user1/frontend-workspace/css-html/html/html84%B1/30_회원가입결과보기.html?signName=홍길동&signAge=70&signId=hong
             
             window.location.search = 
-
+            
             */
             const urlParams = new URLSearchParams(window.location.search);
             const name = urlParams.get('signName');
             const age = urlParams.get('signAge');
+            const gender = urlParams.get('signGender');
             const id = urlParams.get('signId');
             $("#resultName").text(name);
             $("#resultAge").text(age);
             $("#resultId").text(id);
+            $("#resultGender").text(gender);
+
+            //체크박스는 선택이 여러개 모두 All
+            // 사용자가 선택한 체크박스를 모두 가져오기
+            const hobbies = urlParams.getAll("signHobby");
+            $("#resultHobby").text(hobbies.join(",")); //join 사용해서 ,로 이어 붙이기
+
 
             
         })
