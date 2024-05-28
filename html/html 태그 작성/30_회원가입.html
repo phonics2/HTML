@@ -60,11 +60,11 @@
             <br>
             <label>비밀번호확인 : </label>
             <input type="password" id="pw2">
-            <button type="submit" onclick="회원가입버튼()">회원가입완료</button>
+            <button type="submit" onclick="회원가입버튼(event)">회원가입완료</button>
         </form>
     </body>
     <script>
-        function 회원가입버튼(){
+        function 회원가입버튼(event){
             const pw1 = $("#pw1").val();
             const pw2 = $("#pw2").val();
 
