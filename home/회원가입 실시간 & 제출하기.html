@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>내 블로그</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+      }
+      /* 네비게이션 꾸미기*/
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin: 0 10px; /*상하 0 좌우 10*/
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      .check{
+        color: green;
+      }
+      .error{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>방문자 회원가입</h1>
+      <nav>
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">소개</a></li>
+          <li><a href="#">연락처</a></li>
+        </ul>
+      </nav>
+    </header>
+    <style>
+      /* class container 꾸미기 class 는 .으로 시작*/
+      /* class posts class 꾸미기 .으로 시작*/
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px;
+      }
+      .posts {
+        flex: 2;
+      }
+      .posts .article {
+        background-color: white;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px #f2f2f2;
+        margin-right: 20px;
+      }
+      .posts .article h2 {
+        margin-top: 0;
+      }
+      .posts .article a {
+        color: #333;
+        text-decoration: none;
+      }
+      /* aside class 꾸며주기 */
+      .aside {
+        flex: 1;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #f2f2f2;
+        margin-bottom: 17px;
+      }
+      /*div class posts 밑에 있는 article class 꾸미기*/
+    </style>
+    <div class="container">
+      <div class="posts">
+        <!-- article : 블로그나, 글, 뉴스기사, 포럼 게시물 등과 같이 독립적으로
+            작성하거나 재사용 할 수 있는 내용을 작성할 때 사용
+        -->
+        <div class="article">
+          <h2>블로그 글 제목1</h2>
+          <p>
+            첫 번째 블로그 글 내용입니다. 우리 블로그에는 다양한 정보를 담고
+            있습니다.
+          </p>
+          <a href="#">더보기</a>
+        </div>
+        <div class="article">
+          <h2>블로그 제목2</h2>
+          <p>여기는 블로그로 소통하고 정보를 나누는 공간입니다.</p>
+          <a href="#">더보기</a>
+        </div>
+      </div>
+      <!-- aside : 본문 내용과 간접적으로 관련된 내용을 표시할 때 사용
+                    예를 들어 블로그 페이지의 사이드바, 광고, 관련링크, 저자정보 등
+        -->
+      <div class="aside">
+        <h2>소개</h2>
+        <p>
+          안녕하세요. 저의 블로그입니다. 제 블로그에 오신것을 환영합니다. 여기서
+          다양한 생각과 경험을 공유합니다.
+        </p>
+      </div>
+      <style>
+        /* visitor-comment 방문자 댓글 공간 꾸미기 */
+        .visitor-comments {
+          flex: 1 1 100%;
+          background-color: white;
+          padding: 20px;
+          box-shadow: 0 0 10px #f2f2f2;
+        }
+        .visitor-comments h2 {
+          margin-top: 0;
+        }
+        .visitor-comments form {
+          display: flex;
+          flex-direction: column;
+        }
+        .visitor-comments label {
+          margin: 10px 0 5px; /*상10px  좌우0px  하5px*/
+        }
+        .visitor-comments textarea,
+        .visitor-comments input {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+
+        .visitor-comments button {
+          border: none;
+          color: white;
+          background-color: #333;
+          border-radius: 5px;
+          margin-top: 10px;
+          padding: 10px;
+          border: none;
+          cursor: pointer;
+        }
+        footer {
+          text-align: center;
+          padding: 20px 0;
+          background-color: #333;
+          color: white;
+        }
+        .error {
+          color: red;
+        }
+        .check {
+          color: green;
+        }
+      </style>
+      <div class="visitor-comments">
+        <!-- visitor 방문자 comment 댓글들-->
+        <h2>방문자 회원가입</h2>
+        <form action="#" method="post">
+          <label>이름 : </label>
+          <input type="text" required id="이름" />
+          <span id="이름결과"></span>
+
+          <label>아이디 : </label>
+          <input type="text" id="아이디" />
+          <span id="아이디결과"></span>
+
+          <label>비밀번호 : </label>
+          <input type="password" id="비밀번호1" />
+          <span id="비밀번호결과"></span>
+
+          <label>비밀번호 확인 : </label>
+          <input type="password" id="비밀번호2" />
+          <span id="비밀번호확인결과"></span>
+          <button type="submit" onclick="가입하기()">제출</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      const 체크 = {
+        "이름":false,
+        "아이디":false,
+        "비밀번호":false,
+        "비밀번호확인":false,
+      }
+      const 이름 = document.getElementById("이름");
+      const 아이디 = document.getElementById("아이디");
+      const 비밀번호 = document.getElementById("비밀번호1");
+      const 비밀번호확인 = document.getElementById("비밀번호2");
+      const namePattern = /^[가-힣]{2,5}$/;
+      const idPattern = /^[a-z0-9]{5,10}$/;
+      const passPattern = /^[a-z0-9]{6,16}$/;
+      이름.addEventListener("input",e=>{
+        const 이름 = e.target.value;
+        const 스판 = document.getElementById("이름결과");
+
+        if(이름.trim().length === 0){
+          스판.textContent="";
+          span.classList.remove("check","error");
+          return;
+        }
+        if(namePattern.test(이름)){
+          스판.textContent="이름형식에 맞습니다!";
+          스판.classList.add("check");
+          스판.classList.remove("error");
+          체크["이름"] = true;
+        } else{
+          스판.textContent="형식이 맞지 않습니다.";
+          스판.classList.add("error");
+          스판.classList.remove("check");
+          체크["이름"] = false;
+        }
+
+      });
+      아이디.addEventListener("input",e=>{
+        const 아이디 = e.target.value;
+        const 스판 = document.getElementById("아이디결과");
+
+        //공백을 제거한 입력한 길이가 0 그러니까 입력하지 않으면
+        if(아이디.trim().length === 0){
+          스판.textContent="";
+          스판.classList.remove("check","error");
+          return;
+        }
+        if(idPattern.test(아이디)){
+          스판.textContent="아이디형식이 올바릅니다!";
+          스판.classList.add("check");
+          스판.classList.remove("error");
+          체크["아이디"] = true;
+        } else{
+          스판.textContent="형식이 올바르지 않습니다.";
+          스판.classList.remove("check");
+          스판.classList.add("error");
+          체크["아이디"] = false;
+        }
+      });
+      비밀번호.addEventListener("input",e=>{
+        const 비밀번호 = e.target.value;
+        const 스판 = document.getElementById("비밀번호결과");
+
+        //공백을 제거한 입력한 길이가 0 그러니까 입력하지 않으면
+        if(비밀번호.trim().length === 0){
+          스판.textContent="";
+          스판.classList.remove("check","error");
+          return;
+        }
+        if(passPattern.test(비밀번호)){
+          스판.textContent="비밀번호형식이 올바릅니다!";
+          스판.classList.add("check");
+          스판.classList.remove("error");
+          체크["비밀번호"] = true;
+        } else{
+          스판.textContent="형식이 올바르지 않습니다.";
+          스판.classList.remove("check");
+          스판.classList.add("error");
+          체크["비밀번호"] = false;
+        }
+      });
+      비밀번호확인.addEventListener("input",e=>{
+        const 비밀번호확인 = e.target.value;
+        const 비밀번호밸류 = 비밀번호.value;
+        const 스판 = document.getElementById("비밀번호확인결과");
+
+        //공백을 제거한 입력한 길이가 0 그러니까 입력하지 않으면
+        if(비밀번호확인.trim().length === 0){
+          스판.textContent="";
+          스판.classList.remove("check","error");
+          return;
+        }
+        if(비밀번호밸류 === 비밀번호확인){
+          스판.textContent="서로 같습니다.";
+          스판.classList.add("check");
+          스판.classList.remove("error");
+          체크["비밀번호확인"] = true;
+        } else{
+          스판.textContent="비밀번호가 서로 다릅니다.";
+          스판.classList.remove("check");
+          스판.classList.add("error");
+          체크["비밀번호확인"] = false;
+        }
+      });
+      function 가입하기(){
+        let 회원가입성공 = true;
+        for(const key in 체크){
+          if(!체크[key]){
+            회원가입성공 = false;
+            break;
+          } 
+        }
+        if(회원가입성공){
+          alert("회원가입성공");
+        } else{
+          alert("회원가입실패");
+        }
+      }
+      
+    </script>
+    <footer>
+      <p>&copy; 2024 내 블록. 모든 권리 보유.</p>
+    </footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</html>

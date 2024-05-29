@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>내 블로그</title>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+      }
+      /* 네비게이션 꾸미기*/
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin: 0 10px; /*상하 0 좌우 10*/
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>방문자 회원가입</h1>
+      <nav>
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">소개</a></li>
+          <li><a href="#">연락처</a></li>
+        </ul>
+      </nav>
+    </header>
+    <style>
+      /* class container 꾸미기 class 는 .으로 시작*/
+      /* class posts class 꾸미기 .으로 시작*/
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px;
+      }
+      .posts {
+        flex: 2;
+      }
+      .posts .article {
+        background-color: white;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px #f2f2f2;
+        margin-right: 20px;
+      }
+      .posts .article h2 {
+        margin-top: 0;
+      }
+      .posts .article a {
+        color: #333;
+        text-decoration: none;
+      }
+      /* aside class 꾸며주기 */
+      .aside {
+        flex: 1;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #f2f2f2;
+        margin-bottom: 17px;
+      }
+      /*div class posts 밑에 있는 article class 꾸미기*/
+    </style>
+    <div class="container">
+      <div class="posts">
+        <!-- article : 블로그나, 글, 뉴스기사, 포럼 게시물 등과 같이 독립적으로
+            작성하거나 재사용 할 수 있는 내용을 작성할 때 사용
+        -->
+        <div class="article">
+          <h2>블로그 글 제목1</h2>
+          <p>
+            첫 번째 블로그 글 내용입니다. 우리 블로그에는 다양한 정보를 담고
+            있습니다.
+          </p>
+          <a href="#">더보기</a>
+        </div>
+        <div class="article">
+          <h2>블로그 제목2</h2>
+          <p>여기는 블로그로 소통하고 정보를 나누는 공간입니다.</p>
+          <a href="#">더보기</a>
+        </div>
+      </div>
+      <!-- aside : 본문 내용과 간접적으로 관련된 내용을 표시할 때 사용
+                    예를 들어 블로그 페이지의 사이드바, 광고, 관련링크, 저자정보 등
+        -->
+       
+      <div class="aside">
+        <h2>소개</h2>
+        <p>
+          안녕하세요. 저의 블로그입니다. 제 블로그에 오신것을 환영합니다. 여기서
+          다양한 생각과 경험을 공유합니다.
+        </p>
+      </div>
+      <style>
+        /* visitor-comment 방문자 댓글 공간 꾸미기 */
+        .visitor-comments {
+          flex: 1 1 100%;
+          background-color: white;
+          padding: 20px;
+          box-shadow: 0 0 10px #f2f2f2;
+        }
+        .visitor-comments h2 {
+          margin-top: 0;
+        }
+        .visitor-comments form {
+          display: flex;
+          flex-direction: column;
+        }
+        .visitor-comments label {
+          margin: 10px 0 5px; /*상10px  좌우0px  하5px*/
+        }
+        .visitor-comments textarea,
+        .visitor-comments input {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+
+        .visitor-comments button {
+          border: none;
+          color: white;
+          background-color: #333;
+          border-radius: 5px;
+          margin-top: 10px;
+          padding: 10px;
+          border: none;
+          cursor: pointer;
+        }
+        footer {
+          text-align: center;
+          padding: 20px 0;
+          background-color: #333;
+          color: white;
+        }
+        .빨{
+            color:red;
+        }
+        .초{
+            color:green;
+        }
+      </style>
+      <div class="visitor-comments">
+        <!-- visitor 방문자 comment 댓글들-->
+        <h2>방문자 회원가입</h2>
+        <form action="#" method="post">
+          <label>이름 : </label>
+          <input type="text" required id="이름"/>
+          <span id="결과1">한글 2~5자</span>
+          <label>아이디 : </label>
+          <input type="text" id="userId">
+          <p id="결과">소문자 /숫자 사용 6~16 자리</p>
+          <label>비밀번호 : </label>
+          <input type="password" id="비밀번호1" />
+          <p id="비번결과">대/소문자 숫자 사용 8~16자리</p>
+          <label>비밀번호 확인 : </label>
+          <input type="password" id="비밀번호2" />
+          
+          <button type="submit" onclick="가입하기(event)">제출</button>
+          <button onclick="비밀번호확인()">비밀번호확인</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      const 비밀번호정규식 = /^[a-z0-9A-Z]{8,16}$/;
+      function 비밀번호확인(){
+
+        const 비번밸류 = $("#비밀번호1").val();
+        if(정규식.test(비번밸류)){
+          alert("비밀번호 형식이 올바릅니다.");
+        } else{
+          alert("올바르지 않습니다.");
+        }
+      }
+    </script>
+    <script>
+        const 스판 = document.getElementById("결과1");
+        const 이름값 = document.getElementById("이름");
+        이름값.addEventListener("input",e=>{
+            const 이름밸류 = e.target.value;
+            const 정규 = /^[가-힇]{2,5}$/;
+            if(이름밸류.trim().length === 0){
+                스판.textContent="한글2~5자";
+                스판.classList.remove("초","빨");
+                return;
+            }
+            if(정규.test(이름밸류)){
+                스판.textContent="사용가능!";
+                스판.classList.add("초");
+                스판.classList.remove("빨");
+            } else{
+                스판.textContent="사용불가!";
+                스판.classList.add("빨");
+                스판.classList.remove("초");
+            }
+
+        })
+        $(document).ready(function(){
+            $("#userId").on("input",function(){
+                const 아이디 = $(this).val();
+                const 정규식 = /^[0-9a-z]{6,16}$/;
+            
+                if(아이디.trim().length == 0){
+                    $("#결과").text("소문자 /숫자 사용 6~16 자리");
+                    $("#결과").css("color","black");
+                    return;
+                }
+                if(정규식.test(아이디)){
+                    $("#결과").text("사용가능합니다!");
+                    $("#결과").css("color","green");
+                } else{
+                    $("#결과").text("형식이 맞지 않습니다.");
+                    $("#결과").css("color","red");
+                }
+            })
+        })
+        $(document).ready(function(){
+          $("#비밀번호1").on("input",function(){
+            const 비번밸류 = $(this).val();
+            if(비번밸류.trim().length === 0){
+                $("#비번결과").text("대/소문자 숫자 사용 8~16자리");
+                $("#비번결과").css("color","black");
+                return;
+            }
+            if(비밀번호정규식.test(비번밸류)){
+              $("#비번결과").text("올바릅니다!.");
+              $("#비번결과").css("color","green");
+            } else{
+              $("#비번결과").text("잘못된 형식입니다.");
+              $("#비번결과").css("color","red");
+            }
+          })
+        })
+
+    </script>
+    <footer>
+      <p>&copy; 2024 내 블록. 모든 권리 보유.</p>
+    </footer>
+    
+  </body>
+ 
+</html>
+

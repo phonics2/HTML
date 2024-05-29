@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <style>
+        /*헤더 와 네비게이션 바디 css*/
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            background-color: brown;
+            padding: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+            /*상하 0 좌우 10*/
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /*컨테이너 css*/
+        .container {
+            margin: 20px;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .posts {
+            flex: 2;
+        }
+
+        .posts .블로그 {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            box-shadow: 0 0 10px #f2f2f2;
+        }
+
+        /*기본적으로 태그들은 마진이나 패딩이 들어가있음*/
+        .posts .블로그 h2 {
+            margin-top: 0;
+        }
+
+        .posts .블로그 a {
+            text-decoration: none;
+            color: brown;
+        }
+
+        .설명 {
+            flex: 1;
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 17px;
+            box-shadow: 0 0 10px #F2f2f2;
+        }
+
+        .설명 h2 {
+            margin-top: 0;
+        }
+
+        .방문자의견 {
+            flex: 1 1 100%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px #f2f2f2;
+        }
+
+        .방문자의견 h2 {
+            margin-top: 0;
+        }
+
+        .방문자의견 form {
+            /*폼을 display flex를 하고 */
+            display: flex;
+            /*flex 다이렉션으로 form안에 인풋태그의 크기를 딱맞게 지정함*/
+            flex-direction: column;
+        }
+
+        .방문자의견 label {
+            margin: 10px 0 5px;
+            /*상10px  좌우0px  하5px*/
+        }
+
+        .방문자의견 input,
+        .방문자의견 textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .방문자의견 button {
+            border: none;
+            color: white;
+            background-color: #333;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>내 블로그에 오신것을 환영합니다.</h1>
+        <nav>
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">연락처</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="posts">
+            <div class="블로그">
+                <h2>블로그 글 제목1</h2>
+                <p>첫 번째 블로그 글 내용입니다. 우리 블로그에는 다양한 정보를 담고 있습니다.</p>
+                <a href="#">더보기</a>
+            </div>
+            <div class="블로그">
+                <h2>블로그 제목2</h2>
+                <p>여기는 블로그로 소통하고 정보를 나누는 공간입니다.</p>
+                <a href="#">더보기</a>
+            </div>
+
+        </div>
+        <div class="설명">
+            <h2>소개</h2>
+            <p>안녕하세요. 저의 블로그입니다. 제 블로그에 오신것을 환영합니다. 여기서 다양한 생각과 경형을 공유합니다.</p>
+        </div>
+        <div class="방문자의견">
+            <h2>방문자 의견</h2>
+            <form>
+                <label>이름 : </label>
+                <input type="text" id="userName" required>
+                <label>아이디 : </label>
+                <input type="text" id="userId" required>
+                <label>비밀번호 : </label>
+                <input type="password" id="pw1">
+                <label>비밀번호 확인 : </label>
+                
+                <button type="submit">제출</button>
+            </form>
+
+        </div>
+    </div>
+    <!-- 컨테이너 css 가 겹치지 않게 밖에다가 푸터 만들기-->
+    <footer>
+        <p>&copy; 2024 내 블록. 모든 권리 보유.</p>
+    </footer>
+</body>
+
+</html>

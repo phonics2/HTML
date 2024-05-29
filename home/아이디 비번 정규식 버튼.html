@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <style>
+           label{
+            display: flex;
+           } 
+        </style>
+    </head>
+    <body>
+        <label for="">아이디</label>
+        <input type="text" id="userId" placeholder="소문자숫자6~15">
+       <br> <label for="">비밀번호</label>
+        <input type="password" id="pw1" placeholder="소/대문자 숫자 8~15">
+       <br> <label for="">비밀번호 확인</label>
+        <input type="password" id="pw2">
+        <button onclick="아이디()">아이디 확인</button>
+        <button onclick="비밀번호()">비밀번호 확인</button>
+    </body>
+    <script>
+        const 아이디정규 = /^[a-z0-9]{6,15}$/;
+        const 비밀번호정규 = /^[a-z0-9A-Z]{8,15}$/;
+        function 아이디(){
+            const 아이디값 = $("#userId").val();
+            if(아이디정규.test(아이디값)){
+                alert("아이디 형식이 맞습니다.");
+
+            } else{
+                alert("올바르지 않습니다.");
+            }
+        }
+        function 비밀번호(){
+            const 비밀번호값 = $("#pw1").val();
+            const 비밀번호확인값 = $("#pw2").val();
+            if(비밀번호값 !== 비밀번호확인값){
+                alert("비밀번호가 서로 다릅니다.");
+                return;
+            }
+            if(비밀번호정규.test(비밀번호값)){
+                alert("비밀번호 형식이 맞습니다.");
+            } else{
+                alert("올바르지 않습니다.");
+            }
+            
+        }
+        
+    </script>
+</html>
